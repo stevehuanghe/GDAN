@@ -1,0 +1,42 @@
+# dataset setting
+data_name: 'APY'
+data_root: './ZSL-GBU/xlsa17/data'
+
+# i/o setting
+result: './result/apy'
+ckpt_dir: './checkpoints/gdan_apy'
+vae_dir: './checkpoints/cvae_apy/'
+vae_ckpt: './checkpoints/cvae_apy/cvae_590.pkl'
+best_checkpoint: 'gdan_220.pkl'
+
+# flags and environment
+gpu: '0'
+debug: False
+
+# evaluation
+num_samples: 500
+K: 1
+classifier: 'knn'
+C: 10.1
+
+# optimizer setting
+epoch: 500
+batch: 128
+steps: -1
+learning_rate: 0.00001
+g_iter: 1
+d_iter: 1
+
+# model setting
+s_dim: 64
+x_dim: 2048
+z_dim: 100
+
+enc: '1200 600'
+dec: '600'
+reg: '512'
+dis: '800'
+
+theta1: 0.1
+theta2: 0.1
+theta3: 0.1

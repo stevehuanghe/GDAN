@@ -1,0 +1,37 @@
+# dataset setting
+data_name: 'AWA2'
+data_root: './ZSL-GBU/xlsa17/data'
+
+# i/o setting
+result: './result/awa2'
+ckpt_dir: './data/checkpoints/gdan_awa2'
+vae_dir: './data/checkpoints/cvae_awa2/'
+vae_ckpt: './data/checkpoints/cvae_awa2/cvae_150.pkl'
+best_checkpoint: 'gdan_30.pkl'
+
+# flags and environment
+gpu: '1'
+debug: False
+num_samples: 500
+
+# optimizer setting
+epoch: 500
+batch: 256
+steps: -1
+learning_rate: 0.00001
+g_iter: 1
+d_iter: 1
+
+# model setting
+s_dim: 85
+x_dim: 2048
+z_dim: 100
+
+enc: '1024 512'
+dec: '512'
+reg: '512'
+dis: '800'
+
+theta1: 0.1
+theta2: 0.1
+theta3: 0.1
