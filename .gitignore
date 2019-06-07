@@ -25,6 +25,8 @@ wheels/
 *.egg
 MANIFEST
 data/
+checkpoints/
+result/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

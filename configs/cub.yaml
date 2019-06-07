@@ -1,6 +1,6 @@
 # dataset setting
 data_name: 'CUB'
-data_root: './ZSL-GBU/xlsa17/data'
+data_root: './data/xlsa17/data'
 
 # i/o setting
 result: './result/cub'
