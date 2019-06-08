@@ -85,31 +85,6 @@ class CVAE(nn.Module):
         return torch.mean(reconstruct_loss + KL_divergence)
 
 
-class Generator(nn.Module):
-    def __init__(self, x_dim=2048, s_dim=312, z_dim=100):
-        super(Generator, self).__init__()
-        self.x_dim = x_dim
-        self.s_dim = s_dim
-        self.z_dim = z_dim
-        total_dim = s_dim + z_dim
-        self.FCN = nn.Sequential(
-            nn.Linear(total_dim, 800),
-            nn.BatchNorm1d(800),
-            nn.ReLU(),
-            nn.Linear(800, 1200),
-            nn.BatchNorm1d(1200),
-            nn.ReLU(),
-            nn.Linear(1200, x_dim),
-            nn.ReLU()
-        )
-        self.FCN.apply(init_weights)
-
-    def forward(self, S):
-        Z = torch.rand([S.size()[0], self.z_dim]).cuda()
-        ZS = torch.cat([S, Z], dim=1)
-        return self.FCN(ZS)
-
-
 class Discriminator(nn.Module):
     def __init__(self, x_dim=2048, s_dim=312, layers='1200 600'):
         super(Discriminator, self).__init__()
