@@ -15,20 +15,21 @@ Dataset is available [here](<https://www.mpi-inf.mpg.de/departments/computer-vis
 
 2. Pretrain CVAE, and checkpoints are stored in the directory specified by  "vae_dir" in config file: 
 
-   ```console
+   ```bash
    python pretrain_gdan.py --config configs/cub.yml
    ```
 
 3. Choose which CVAE checkpoint you want to use to initialize the GDAN model and modify the "vae_ckpt" variable in the yaml file. Then we can train GDAN by running:
 
-   ```console
+   ```bash
    python train_gdan.py --config configs/cub.yml
    ```
 
 4. Use validation data to  decide which saved checkpoint of GDAN (directory specified by "ckpt_dir" in config yaml file) to be used for testing and run evaluation:
 
-   ```console
+   ```bash
    python valtest_gdan.py --config configs/cub.yml
    ```
 
    
+
