@@ -31,5 +31,14 @@ Dataset is available [here](<https://www.mpi-inf.mpg.de/departments/computer-vis
    python valtest_gdan.py --config configs/cub.yml
    ```
 
-   
+Bibtex:
 
+```
+@InProceedings{Huang_2019_CVPR,
+author = {Huang, He and Wang, Changhu and Yu, Philip S. and Wang, Chang-Dong},
+title = {Generative Dual Adversarial Network for Generalized Zero-Shot Learning},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2019}
+}
+```
