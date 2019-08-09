@@ -14,7 +14,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 
-from models.zgan import CVAE, Discriminator, Regressor
+from models.gdan import CVAE, Discriminator, Regressor
 from utils.config_gdan import parser
 from utils.data_factory import DataManager
 from utils.utils import load_data, update_values

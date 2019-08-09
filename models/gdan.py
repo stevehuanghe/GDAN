@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 class CVAE(nn.Module):
     def __init__(self, x_dim=2048, s_dim=312, z_dim=100, enc_layers='1200 600', dec_layers='600'):
-        super(CVAE2, self).__init__()
+        super(CVAE, self).__init__()
         self.x_dim = x_dim
         self.s_dim = s_dim
         self.z_dim = z_dim
@@ -151,5 +151,3 @@ class Regressor(nn.Module):
 
     def reg_loss(self, Sp, S, Xp, Xpp):
         return self.criterion(Sp, S) + self.criterion(Xp, Xpp)
-
-
