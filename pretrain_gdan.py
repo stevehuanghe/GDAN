@@ -77,7 +77,7 @@ def main():
             Xp, mu, log_sigma = cvae.forward(X, S)
 
             loss_vae = cvae.vae_loss(X, Xp, mu, log_sigma)
-
+            cvae_opt.zero_grad()
             loss_vae.backward()
             cvae_opt.step()
 
